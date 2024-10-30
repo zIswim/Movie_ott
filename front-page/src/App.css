@@ -17,16 +17,49 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     height: 0;
 }
 
-a:link {
-    color : black;
-    text-decoration: none;
+/*헤더의 네비게이션 바 스타일*/
+/* App.css */
+.Header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 25px 20px; /* 메뉴 바 범위*/
+    color: white;
 }
 
-a:visited {
-    color: black;
-    text-decoration: none;
+.HeaderNav {
+    display: flex;
+    justify-content: center; /* 메뉴 중앙정렬 */
+    flex-grow: 1;
 }
 
-a:hover{
+.logo {
+    margin-right: 100px; /* 메뉴와 간격 */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.HeaderNav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* 메뉴 간격 */
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.HeaderNav-list li {
+    margin-right: 20px; /* 각 항목 사이의 간격 */
+}
+
+.HeaderNav-list a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: white; /* 링크 색상 */
+}
+
+.HeaderNav-list a:hover{
     color : gray;
 }
