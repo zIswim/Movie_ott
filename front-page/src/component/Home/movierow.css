@@ -1,0 +1,61 @@
+.movie-row {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 0 20px; /* 좌우 여백 */
+}
+
+.movie-row h2 {
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.movie-row__container {
+    display: flex;
+    flex-direction: row; /* 수평으로 배치 */
+    overflow-x: hidden; /* 가로 스크롤 숨기기 */
+    scroll-behavior: smooth;
+}
+
+.movie-item {
+    margin-right: 10px;
+    flex-shrink: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.movie-item img {
+    width: 150px; /* 포스터 크기 조정 */
+    height: auto;
+    border-radius: 5px;
+}
+
+.button-left, .button-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+.button-left {
+    left: 10px; /* 좌측 버튼 위치 */
+}
+
+.button-right {
+    right: 10px; /* 우측 버튼 위치 */
+}
+
+.button-left:hover, .button-right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
