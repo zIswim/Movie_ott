@@ -1,20 +1,21 @@
-.movie-row {
+.movie-category {
     position: relative;
     margin-bottom: 40px;
-    padding: 0 20px; /* 좌우 여백 */
+    padding: 0 50px;
 }
 
-.movie-row h2 {
+.movie-category h2 {
     margin-left: 20px;
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.movie-row__container {
+.movie-info {
     display: flex;
-    flex-direction: row; /* 수평으로 배치 */
-    overflow-x: hidden; /* 가로 스크롤 숨기기 */
+    flex-direction: row;
+    overflow: hidden;
     scroll-behavior: smooth;
+    position: relative;
 }
 
 .movie-item {
@@ -22,12 +23,24 @@
     flex-shrink: 0;
     display: inline-block;
     text-align: center;
+    position: relative; /* 위치를 설정하여 이미지가 확장될 공간을 제공 */
 }
 
 .movie-item img {
-    width: 150px; /* 포스터 크기 조정 */
+    width: 200px;
     height: auto;
     border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative; /* 부모 요소를 기준으로 확대할 수 있도록 설정 */
+}
+
+.movie-item img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* 이미지가 다른 요소 위에 올라가도록 설정 */
 }
 
 .button-left, .button-right {
@@ -40,20 +53,20 @@
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
-    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-    width: 50px;
+    width: 30px;
+    border-radius: 30%;
 }
 
 .button-left {
-    left: 10px; /* 좌측 버튼 위치 */
+    left: 10px;
 }
 
 .button-right {
-    right: 10px; /* 우측 버튼 위치 */
+    right: 10px;
 }
 
 .button-left:hover, .button-right:hover {

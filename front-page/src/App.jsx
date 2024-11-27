@@ -6,6 +6,8 @@ import {Routes, Route} from "react-router-dom";
 import Popular from "./views/Popular";
 import Search from "./views/Search";
 import Wishlist from "./views/Wishlist";
+import SignIn from "./react/SignIn";
+import ProtectedRoute   from "./util/ProtectedRoute";
 
 
 // // 인증 여부 확인
@@ -21,14 +23,43 @@ function App() {
         <>
             <Header />
             <Routes>
-                {/*// 메뉴 라우팅*/}
-                <Route path = "/" element={<Home/>}></Route>
-                <Route path = "/popular" element={<Popular/>}></Route>
-                <Route path = "/search" element={<Search/>}></Route>
-                <Route path = "/wishlist" element={<Wishlist/>}></Route>
                 {/*로그인 라우팅*/}
-                {/*<Routes path = "/signin"*/}
-                {/*    element={isAuthenticated() ? <Navigate to="/" replace/> : <SignIn/>} />*/}
+                <Route path = "/signin" element={<SignIn/>}></Route>
+
+                {/* 보호된 경로 */}
+                <Route
+                    path="/"
+                    element={
+                        <ProtectedRoute>
+                            <Home />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/popular"
+                    element={
+                        <ProtectedRoute>
+                            <Popular />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/search"
+                    element={
+                        <ProtectedRoute>
+                            <Search />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/wishlist"
+                    element={
+                        <ProtectedRoute>
+                            <Wishlist />
+                        </ProtectedRoute>
+                    }
+                />
+
             </Routes>
         </>
     )

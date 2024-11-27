@@ -1,0 +1,54 @@
+.banner {
+    position: relative;
+    height: 500px; /* 배너 높이 설정 */
+    background-size: cover; /* 배경 이미지가 배너를 가득 채우도록 */
+    background-position: center; /* 배경 이미지의 중앙을 맞춤 */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* 텍스트에 그림자 추가 */
+}
+
+.banner h1 {
+    font-size: 3em; /* 제목 크기 확장 */
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.2; /* 줄 간격을 1.2로 설정 */
+}
+
+.banner p {
+    font-size: 1.2em; /* 설명 텍스트 크기 확장 */
+    margin: 20px 0;
+    max-width: 600px; /* 설명 텍스트의 최대 너비 제한 */
+    line-height: 1.6; /* 줄 간격을 1.6으로 설정 */
+    text-align: justify;
+}
+
+.title-btn {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.play-btn {
+    background-color: #1d9a6c; /* '재생' 버튼 색상 */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.info-btn {
+    background-color: white; /* '상세 정보' 버튼 색상 */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.title-btn:hover {
+    background-color: #e50914; /* 버튼 hover 시 색상 변화 */
+}

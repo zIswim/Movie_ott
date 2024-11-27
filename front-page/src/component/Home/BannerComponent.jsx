@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import './bannercomponent.css';
 
 const BannerComponent = ({movie}) => {
     if (!movie) {
@@ -23,5 +24,6 @@ BannerComponent.propTypes = {
         backdrop_path: PropTypes.string.isRequired,
     }).isRequired,
 };
+
 
 export default BannerComponent;

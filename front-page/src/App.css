@@ -37,6 +37,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     margin-right: 100px; /* 메뉴와 간격 */
 }
 
+.myPage {
+    margin-left: 100px;
+}
+
 .menu {
     display: flex;
     align-items: center;
